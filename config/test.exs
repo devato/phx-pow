@@ -16,3 +16,7 @@ config :phx_pow, PhxPowWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+# Bamboo mailer config
+config :phx_pow, PhxPowWeb.Mailer,
+  adapter: Bamboo.TestAdapter

@@ -42,4 +42,8 @@ defmodule PhxPowWeb.Router do
   scope "/api", PhxPowWeb do
     pipe_through :api
   end
+
+  if Mix.env == :dev do
+    forward "/sent_emails", Bamboo.SentEmailViewerPlug
+  end
 end
